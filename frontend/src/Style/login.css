@@ -1,0 +1,116 @@
+.bodyLogin{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+.window-login{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.text{
+    width: 100%;
+    height: 130px;
+}
+
+form.login{
+    width: 100%;
+
+}
+
+form.login > input{
+    height: 50px;
+    width: 750px;
+    color: rgb(36, 36, 36);
+    border-radius: 8px;
+    border: 0.5px solid rgb(152, 152, 152);
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+form.login > label > input{
+    height: 50px;
+    width: 750px;
+    color: rgb(36, 36, 36);
+    border-radius: 8px;
+    border: 0.5px solid rgb(152, 152, 152);
+    padding-left: 15px;
+    font-size: 17px;
+    z-index: 1;
+}
+       #eye-off-outline , #eye-outline{
+            position: relative;
+            left: 20px;
+            top: 10px;
+            font-size: 28px;
+            color: #4543CE;
+            z-index: 3;
+        }
+
+        #eye-off-outline:hover , #eye-outline:hover{
+            cursor: pointer;
+            color: grey;
+        }
+
+       
+
+.remeber-forgot{
+    display: flex;
+    width: 95%;
+    height: 40px;
+}
+
+.remeber-forgot > .remeber-me {
+    width: 50%;
+    height: 40px;
+    padding-top: 30px;
+    text-align: left;
+
+}
+
+input[type="checkbox"]{
+        width: 17px;
+        height: 17px;
+        border-radius: 15px;
+    }
+
+
+.remeber-forgot > .forgot{
+    width: 50%;
+    height: 40px;
+    padding-top: 30px;
+    text-align: right;
+
+}
+
+.sing-in{
+    position: relative;
+    top: 30px;
+    width: 750px;
+    height: 50px;
+    background-color: #4543CE;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sing-in:hover{
+    cursor: pointer;
+}
+
+.errorsForm{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 53, 53);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+  }

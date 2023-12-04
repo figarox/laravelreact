@@ -1,0 +1,130 @@
+:root {
+    --navbar-height: 70px;
+}
+
+.navbar{
+    position: relative;
+    width: 100%;
+    height: var(--navbar-height);
+    background: linear-gradient(180deg, rgba(22,44,77,1) 0%, rgba(5,9,14,1) 100%);
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 79%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    min-width: 15%;
+    height: 70px;
+    margin-right: 20px;
+    background-color: red;
+}
+
+
+.navbar-nav li {
+    margin: 10px 0px 0px 0px
+}
+
+.navbar-nav li button{
+    font-size: 17px;
+    min-width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(226, 226, 226);
+    transition: background-color 300ms ease
+}
+
+.navbar-nav li button:hover{
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(150,150,150,0.2) 100%);
+    cursor: pointer;
+    color: white;
+}
+
+.circleAccout{
+    position: relative;
+    width: calc(var(--navbar-height) - 10px);;
+    height: calc(var(--navbar-height) - 10px);;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: black;
+    top: 3px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: background-color 300ms ease
+}
+
+    .circleAccout:hover{
+        cursor: pointer;
+        background-color: rgba(253, 253, 253, 0.251);
+    }
+
+#person-outline{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+}
+
+.toggleMenu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(12, 12, 12, 0.817);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.dropdown-menu{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    padding: 0;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.dropdown-menu li{ 
+    position: relative;
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+
+}
+
+.dropdown-menu li:hover{
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(150,150,150,0.2) 100%);
+
+}
+
+.toggleMenu > .circleAccout{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.informationAccount{
+    position: relative;
+    top: -20px;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    border: 0.5px solid white;
+}
+
