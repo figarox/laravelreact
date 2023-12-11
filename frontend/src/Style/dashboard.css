@@ -1,130 +1,164 @@
 :root {
-    --navbar-height: 70px;
+  --navbar-height: 70px;
 }
 
-.navbar{
-    position: relative;
-    width: 100%;
-    height: var(--navbar-height);
-    background: linear-gradient(180deg, rgba(22,44,77,1) 0%, rgba(5,9,14,1) 100%);
-    display: flex;
-    flex-direction: row;
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+.bodymenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: var(--navbar-height);
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(226, 226, 226) 100%
+  );
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar-nav {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    width: 79%;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  width: 79%;
+  margin: 0;
+  padding: 0;
 }
 
-.logo{
-    min-width: 15%;
-    height: 70px;
-    margin-right: 20px;
-    background-color: red;
+.logo {
+  min-width: 15%;
+  height: 70px;
+  margin-right: 20px;
+  background-color: red;
 }
-
 
 .navbar-nav li {
-    margin: 10px 0px 0px 0px
+  margin: 10px 0px 0px 0px;
 }
 
-.navbar-nav li button{
-    font-size: 17px;
-    min-width: 200px;
-    height: 50px;
-    background-color: transparent;
-    border: 0px;
-    border-radius: 5px;
-    color: rgb(226, 226, 226);
-    transition: background-color 300ms ease
+.navbar-nav li button {
+  font-size: 17px;
+  min-width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 0px;
+  border-radius: 5px;
+  color: rgb(5, 5, 5);
+  transition: box-shadow 350ms ease-in-out;
 }
 
-.navbar-nav li button:hover{
-    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(150,150,150,0.2) 100%);
-    cursor: pointer;
-    color: white;
+.navbar-nav li button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  cursor: pointer;
+  color: rgb(57, 57, 57);
 }
 
-.circleAccout{
-    position: relative;
-    width: calc(var(--navbar-height) - 10px);;
-    height: calc(var(--navbar-height) - 10px);;
-    border-radius: 50%;
-    border: 1px solid white;
-    background-color: black;
-    top: 3px;
-    margin-left: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    transition: background-color 300ms ease
+.circleAccout {
+  position: relative;
+  width: calc(var(--navbar-height) - 10px);
+  height: calc(var(--navbar-height) - 10px);
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: black;
+  top: 3px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 300ms ease;
 }
 
-    .circleAccout:hover{
-        cursor: pointer;
-        background-color: rgba(253, 253, 253, 0.251);
-    }
-
-#person-outline{
-    position: absolute;
-    color: white;
-    font-size: 30px;
+.circleAccout:hover {
+  cursor: pointer;
+  background-color: rgba(253, 253, 253, 0.251);
 }
 
-.toggleMenu{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(12, 12, 12, 0.817);
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+#person-outline {
+  position: absolute;
+  color: white;
+  font-size: 30px;
 }
 
-.dropdown-menu{
-    width: 100%;
-    height: 550px;
-    display: flex;
-    padding: 0;
-    justify-content: center; 
-    align-items: center;
-    flex-direction: column;
-
+.dropdown-container {
+  position: relative;
+  display: inline-block;
 }
 
-.dropdown-menu li{ 
-    position: relative;
-    width: 100%;
-    height: 50px;
-    list-style-type: none;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    color: white;
-
+.dropdown-button {
+  left: 50px;
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  padding: 10px;
+  cursor: pointer;
+  border: 0.4px solid rgba(255, 255, 255, 0.829);
 }
 
-.dropdown-menu li:hover{
-    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(150,150,150,0.2) 100%);
-
+.dropdown-button:hover {
+  background-color: #12121258;
 }
 
-.toggleMenu > .circleAccout{
-    position: absolute;
-    top: 5px;
-    right: 10px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -80px;
 }
 
-.informationAccount{
-    position: relative;
-    top: -20px;
-    width: 250px;
-    height: 200px;
-    border-radius: 15px;
-    border: 0.5px solid white;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+#open-menu {
+  font-size: 30px;
+}
+
+#close-menu {
+  font-size: 30px;
+  color: rgb(216, 216, 216);
+}
+
+.MenuLeft {
+  position: relative;
+  width: 250px;
+  height: 100%;
+  background-color: aqua;
+}
+
+.rowTable {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
